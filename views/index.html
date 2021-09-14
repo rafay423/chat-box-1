@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <button id="show">profile</button>
+  <div id="profile" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content">
+
+          <div id="img">
+
+            <img src="<%= data.imageUrl %>" alt="" id="img">
+        
+
+          </div>
+
+          <div id="textinfo">
+            
+            <label for="name" id="name">Name</label>
+            <br>
+            <p id="name" name="name"></span>
+
+            <br>
+
+            <h1>Friends:</h1>
+            <br>
+            
+            <ol id="friends" type="I">
+            <% data.friendList.forEach(friend => { %>
+
+              <li><%= friend %></li>
+            
+            <% }) %>
+            </ol>
+
+          </div>
+
+          
+        </div>
+  </div>
+<button id="showroom" onclick="showroom()">Chat</button>
+  <div id="room">
+    <a class="closebtn" onclick="closeroom()">&times;</a>
+		<div id="join">
+			<input type="text" id="code" placeholder="code" maxlength="5">
+      <input type="button" value="Join" id="join">
+    </div>
+    <p>OR</p>
+    <div id="create">
+     <input type="button" value="create room" id="create">
+    </div>
+  </div>
+  <p id="code"></p>
+  
+  
+<p id="typing"></p>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="../scripts/script.js"></script>
+<link rel="stylesheet" href="../styles/style.css">
+</html>

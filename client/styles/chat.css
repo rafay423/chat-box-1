@@ -1,0 +1,102 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+div#chatbox{
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  height: 94%;
+  width: 95%;
+  transform: translateX(-50%);
+  background: #0000FF;
+}
+
+
+div ul{
+  min-height: 400px;
+  overflow-y: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #0000FF;
+  color: rgb(211, 243, 255);
+  font-size: 20px;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+div ul li{
+  background: #050A30;
+  color: rgb(211, 243, 255);
+  width: auto;
+  padding: 25px 20px 20px 20px;
+  margin-top: 15px;
+}
+
+div ul li span.time{
+
+  color: white;
+  font-size: 13px;
+  position: relative;
+  top: -35px;
+  margin-left: 15px;
+}
+div ul li span.name{
+
+  color: #050A30;
+  font-size: 30px;
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 8px;
+  top: -32px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+div ul li span.msg{
+  position: absolute;
+  left: 20px;
+  margin-top: 20px;
+}
+input#submit{
+  outline: none;
+  border: none;
+  width: 10%;
+  min-width: 110px;
+  height: 35px;
+  text-align: center;
+  font-size: 25px;
+  position: absolute;
+  bottom: 35px;
+  left: calc(100% - 10%);
+  /* background: #050A30;
+  color: rgb(186, 237, 255); */
+  cursor: pointer;
+}
+
+input#msg{
+  outline: none;
+  border: none;
+  width: 90%;
+  height: 35px;
+  text-align: center;
+  font-size: 25px;
+  position: absolute;
+  bottom: 35px;
+  /* transform: translateY(-50%); */
+}
+p#code{
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
